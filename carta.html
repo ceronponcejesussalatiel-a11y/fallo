@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Mi Amor ❤️</title>
+
+<style>
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+    max-width: 900px;
+}
+
+/* FOTO */
+.foto {
+    width: 40%;
+    background: #000;
+}
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CARTA */
+.carta {
+    width: 60%;
+    padding: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.sobre {
+    background: #ff6f91;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: all 0.8s ease;
+}
+
+.poema {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: #fff8f8;
+    border-radius: 10px;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.carta.abierta .sobre {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.carta.abierta .poema {
+    opacity: 1;
+    transform: scale(1);
+}
+
+h2 {
+    text-align: center;
+    color: #ff4d6d;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+.firma {
+    text-align: right;
+    margin-top: 20px;
+    font-style: italic;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!-- FOTO DE ELLA -->
+    <div class="foto">
+        <img src="foto.jpg" alt="Mi amor">
+    </div>
+
+    <!-- CARTA -->
+    <div class="carta" onclick="abrirCarta()">
+        <div class="sobre">
+            💌 Haz clic para abrir la carta 💌
+        </div>
+
+        <div class="poema">
+            <h2>Para el amor de mi vida</h2>
+
+            <p>
+            Desde que llegaste a mi vida,<br>
+            todo tiene más color,<br>
+            tus sonrisas son mi hogar,<br>
+            y tu mirada, mi razón.
+            </p>
+
+            <p>
+            Eres mi calma y mi locura,<br>
+            mi mejor sueño al despertar,<br>
+            prometo cuidarte siempre,<br>
+            y nunca dejarte de amar.
+            </p>
+
+            <div class="firma">
+                Con todo mi amor,<br>
+                ❤️ Tu novio ❤️
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function abrirCarta() {
+    document.querySelector('.carta').classList.toggle('abierta');
+}
+</script>
+
+</body>
+</html>
